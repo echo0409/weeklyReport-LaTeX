@@ -1,0 +1,118 @@
+%%% The weekly report template of DTao's lab
+%%% Designed by Di Hu
+%%% Implemented by Yake Wei
+%%% 2020-9-23
+
+
+\documentclass[UTF8,10.5pt]{article} % 10.5pt 为字号大小
+\usepackage{amssymb,amsfonts,amsmath,amsthm}
+\usepackage{fancyhdr}
+\usepackage{xeCJK}
+\usepackage{enumitem}
+\usepackage[numbers,sort&compress]{natbib}\setlength{\bibsep}{0.5ex}
+\usepackage{amsmath}
+\usepackage{indentfirst}
+\usepackage{fontspec}
+\usepackage[a4paper]{geometry}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{fancyhdr}
+\setenumerate[1]{itemsep=0pt,partopsep=0pt,parsep=\parskip,topsep=5pt}
+\setCJKsansfont{SimSun}
+\setCJKmainfont[BoldFont={SimSun},ItalicFont={SimSun}]{SimSun}
+\setCJKfamilyfont{zhsong}{SimSun}
+\newcommand*{\songti}{\CJKfamily{zhsong}} % 宋体
+
+
+\renewcommand{\CJKglue}{\hskip 0.05em}
+\renewcommand{\refname}{\centerline{ \large \bf{参} \hspace{0.07cm} \bf{考}\hspace{0.07cm} \bf{文} \hspace{0.07cm}\bf{献}} }
+%首行缩进
+\setlength{\parindent}{2em}
+\setmainfont{Times New Roman}
+%行距
+\renewcommand{\baselinestretch}{1.2} % 1.4倍行距
+%页边距
+\geometry{verbose,
+  tmargin=2.27cm,% 上边距
+  bmargin=2.27cm,% 下边距
+  lmargin=2cm,% 左边距
+  rmargin=2cm % 右边距
+}
+
+\definecolor{Blue}{RGB}{101,148,200}
+%% 页眉页脚
+\pagestyle{fancy}
+\rhead{ \includegraphics[scale=0.19]{logo.jpg} } 
+\chead{} % 页眉中间位置内容
+\lhead{ \songti \textcolor{Blue}{\bf{机器多模态感知与学习中心}}}
+\renewcommand{\headrulewidth}{0.8pt}
+
+
+%==========
+% 正文部分
+%==========
+
+\begin{document}
+~\\
+\centerline{ \large \bf{每} \hspace{0.07cm} \bf{周}\hspace{0.07cm} \bf{研} \hspace{0.07cm}\bf{究} \hspace{0.07cm}\bf{展} \hspace{0.07cm}\bf{阶}\hspace{0.07cm} \bf{段}\hspace{0.07cm} \bf{汇} \hspace{0.07cm}\bf{报}}
+~\\
+
+%% \noindent 取消首行缩进
+\noindent 汇报人：卫雅珂 \\
+\noindent 电\hspace{0.29cm} 邮：weiyake@std.uestc.edu.cn \\
+\noindent 时间段：2020年9月7日(周一) 至 2020年9月12日(周六) \\
+
+\noindent 一、本周工作：
+
+\begin{enumerate}[labelsep = .5em, leftmargin = -18pt, itemindent = 3em]
+    \item [1.] 阅读周志华《机器学习》第三章：线性模型      
+    \item [2.] 阅读《认知神经科学》第一章：认知神经科学简史；第二章:细胞机制与认知
+    \item [3.] 阅读多模态综述剩余部分，及文中所提及的部分工作。
+\end{enumerate}
+\vspace{0.3cm}
+
+\noindent 二、思考总结：
+
+\noindent \textbf{Part 1.} 
+
+\textbf{这是一个示例，文档支持中文/英文。中文为宋体，英文为Times New Roman。编译时：xe->bib->xe。中间可能会报错，但是不要紧，连续编译过后就可以生成正确的pdf文件。}
+
+在《机器学习》第三章:线性模型中，多分类学习是之前没有接触过的内容。容易想到，将多分类任 务拆解为二分类任务就可以应用二分类方法，这也是解决多分类任务的一般方法。解决多分类任务关键是 如何对多分类任务进行拆分，以及如何对多个分类器进行集成。
+
+\vspace{0.5cm}
+\noindent \textbf{Part 2.} 
+
+\textbf{这是一段引用示例，参考文献在refer.bib中。}
+Training Deep Neural Networks is complicated by the fact \cite{diesase2012improving,levey2020nomenclature,hobson2015cost} that the distribution of each layer’s inputs changes during training, as the parameters of the previous layers change. This\cite{levey2020nomenclature} slows down the training by requiring lower learning rates and careful parameter initialization, and makes it notoriously hard to train models with saturating nonlinearities. We refer to this\cite{hobson2015cost} phenomenon as internal covariate shift, address the problem by normalizing layer in- puts. Our method draws its strength from making normalization a part of the model architecture and performing the normalization for each training mini-batch. Batch Normalization allows us to use much higher learning rates and be less careful about initialization. 
+
+\vspace{0.5cm}
+\noindent \textbf{Part 3.} 
+
+\textbf{这是一段插入公式示例。}
+We calculate AUC by Eq(\ref{equ:AUC}).
+
+\begin{equation}
+ \label{equ:AUC}
+ AUC=\frac{\sum_{{ins_{i}\epsilon positiveclass}}rank_{ins_{i}}-\frac{M \times(M+1))}{2}}{M \times N}
+\end{equation}
+
+where $M$ is the number of positive class, and $N$ is the number of negative class. $rank_{ins_{i}}$ represents the possibility rank of sample $ins_{i}$ in the positive class. AUC indicates classifiers' ability to distinguish both positive and negative classes. Even in the condition of the highly imbalanced dataset, it can still put forward sensible evaluation.
+
+
+\vspace{0.5cm}
+\noindent 三、下周规划：
+\begin{enumerate}[labelsep = .5em, leftmargin = -18pt, itemindent = 3em]
+    \item [1.] 阅读周志华《机器学习》第三章：线性模型      
+    \item [2.] 阅读《认知神经科学》第一章：认知神经科学简史；第二章:细胞机制与认知
+    \item [3.] 阅读多模态综述剩余部分，及文中所提及的部分工作。
+\end{enumerate}
+
+
+\newpage
+
+\bibliographystyle{IEEEtran}
+\bibliography{refer}
+
+
+
+\end{document}
