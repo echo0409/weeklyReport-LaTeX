@@ -1,2 +1,2 @@
 # -LaTeX-
-Dtao's lab 周报LaTeX模版
+GeWu lab 周报LaTeX模版
